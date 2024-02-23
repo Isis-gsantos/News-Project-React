@@ -2,7 +2,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { PostList } from './components/pages/posts'
 import { PostDetails } from "./components/pages/post";
 import { createGlobalStyle } from "styled-components";
-import './App.css';
+import { Header } from "./components/header"; 
+import './components/css/style.css'
 
 
 function App() {
@@ -24,6 +25,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     color: #000;
+    box-sizing: border-box;
+  }
+  a {
+    text-decoration: none;
   }
   
 `
