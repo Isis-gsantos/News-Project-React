@@ -2,25 +2,29 @@
     "data": [
         {
             "id": 1,
-            "title": "Enviroment",
+            "p": "Enviroment",
+            "title": "New Study Reveals Alarming Decline in Global Biodiversity",
             "image": "https://conhecimentocientifico.r7.com/wp-content/uploads/2020/01/iceberg-o-que-e-definicao-formacao-e-consequencias-do-efeito-estufa-2.jpg",
             "span": "10 Feb 2024"
         },
         {
             "id": 2,
-            "title": "Health",
+            "p": "Health",
+            "title": "Healthy Eating",
             "image": "https://recipes.net/wp-content/uploads/2021/04/a-bowl-of-healthy-food.jpg",
             "span": "10 Feb 2024"
         },
         {
             "id": 3,
-            "title": "Technology",
+            "p": "Technology",
+            "title": "Technology Update",
             "image": "https://rockresearch.com/wp-content/uploads/2017/11/event_technology.jpg",
             "span": "10 Feb 2024"
         },
         {
             "id": 4,
-            "title": "Animals",
+            "p": "Animals",
+            "title": "Cute Critters",
             "image": "https://www.cbc.ca/kids/images/wild_and_wonderful_asian_animals_header_1140.jpg",
             "span": "10 Feb 2024"
         }

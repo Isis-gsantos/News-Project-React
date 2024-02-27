@@ -29,10 +29,11 @@ const PostList = () => {
                     {posts.map((post, index) =>
                         <Link key={index} to={`/post/${post.id}`}>
                             <Div>
-                                <Image src={post.image} alt={post.title} />
+                                <img src={post.image} alt={post.title} />
                                 <div>
-                                    <Title>{post.title}</Title>
-                                    <Span>{post.span}</Span>
+                                    <p>{post.p}</p>
+                                    <h3>{post.title}</h3>
+                                    <span>{post.span}</span>
                                 </div>
                             </Div>
                         </Link>
@@ -51,7 +52,9 @@ const Section = styled.section`
 `
 
 const Article = styled.article`
-    background-color: white;
+    background-color: #f8f9fa;
+    box-shadow: 3px 3px 6px hsla(0, 0%, 0%, 0.2);
+    border-radius: 10px;
     max-width: 1000px;
     margin: 0 auto;
     padding: 16px;
@@ -61,11 +64,24 @@ const Article = styled.article`
           "first-child second-child" auto
           "first-child third-child" auto
           "first-child fourth-child" auto /
-            1fr 1fr;
-    grid-template-columns: minmax(200px, 600px);
+        1fr 1fr;
+    grid-template-columns: minmax(100px, 700px);
 
     h2:first-child {
         grid-area: title;
+        position: relative;
+        font-size: 28px;
+
+        &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -10px; /* Ajuste a posição conforme necessário */
+        /* transform: translateY(-50%); */
+        width: 82%; /* Ajuste o comprimento da linha conforme necessário */
+        height: 1px; /* Ajuste a espessura da linha conforme necessário */
+        background-color: #000; /* Cor da linha */
+    }
     }
     a:nth-child(2) {
         grid-area: first-child;
@@ -97,24 +113,25 @@ const Div = styled.div`
         object-fit: cover;
         border-radius: 5px;
     }
-`
 
-const Title = styled.h2`
-    color: orange;
-    padding-bottom: 5px;
-    border-bottom: 1px solid orange;
-    margin-bottom: 6px;
-    font-size: 20px;
-`
+    p {
+        color: orange;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+    }
 
-const Image = styled.img`
-    /* max-width: 400px;
-    max-height: 250px; */
-`
+    h3 {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 10px 0;
+    }
 
-const Span = styled.span`
-    color: grey;
-    margin: 8px 0;
+    span {
+        color: grey;
+         margin: 8px 0;
+        font-size: 14px;
+    }
 `
 
 export { PostList }
