@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Header } from "../header";
+import { MustRead } from "./top-posts";
+import { SubscribeNewsletter } from "../subscribe"; 
+import { Footer } from "../footer"; 
 
 async function getPosts() {
     const response = await fetch("http://localhost:5173/json/posts.json")
@@ -40,6 +43,9 @@ const PostList = () => {
                     )}
                 </Article>
             </Section>
+            <MustRead />
+            <SubscribeNewsletter />
+            {/* <Footer /> */}
         </>
 
 
@@ -52,7 +58,7 @@ const Section = styled.section`
 `
 
 const Article = styled.article`
-    background-color: #f8f9fa;
+    background-color: #fff;
     box-shadow: 3px 3px 6px hsla(0, 0%, 0%, 0.2);
     border-radius: 10px;
     max-width: 1000px;
@@ -76,11 +82,10 @@ const Article = styled.article`
         content: '';
         position: absolute;
         top: 50%;
-        right: -10px; /* Ajuste a posição conforme necessário */
-        /* transform: translateY(-50%); */
-        width: 82%; /* Ajuste o comprimento da linha conforme necessário */
-        height: 1px; /* Ajuste a espessura da linha conforme necessário */
-        background-color: #000; /* Cor da linha */
+        right: -10px; 
+        width: 82%; 
+        height: 1px; 
+        background-color: #000; 
     }
     }
     a:nth-child(2) {
@@ -106,7 +111,7 @@ const Article = styled.article`
 
 const Div = styled.div`  
     display: flex;
-    gap: 16px;
+    gap: 10px;
     img {
         width: 200px;
         height: 110px;
@@ -115,7 +120,7 @@ const Div = styled.div`
     }
 
     p {
-        color: orange;
+        color: cornflowerblue;
         text-transform: uppercase;
         font-size: 12px;
         font-weight: 700;
@@ -124,7 +129,7 @@ const Div = styled.div`
     h3 {
         font-size: 16px;
         font-weight: 500;
-        margin: 10px 0;
+        margin: 5px 0;
     }
 
     span {

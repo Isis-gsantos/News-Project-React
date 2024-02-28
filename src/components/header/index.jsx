@@ -28,7 +28,6 @@ const Header = () => {
 
 const Container = styled.section`
     background-image: url(${Jellyfishimage});
-    
     background-size: cover;
     height: 80vh;
 

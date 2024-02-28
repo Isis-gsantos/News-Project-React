@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "p": "Enviroment",
+            "title": "Amazon Rainforest Faces Drought Crisis: Impacts and Conservation Efforts",
+            "image": "https://services.meteored.com/img/article/amazonia-mostra-sinais-de-recuperacao-apos-seca-historica-de-2023-mas-o-que-esperar-do-clima-para-os-proximos-meses-1705401430318_768.jpg"
+        },
+        {
+            "id": 2,
+            "p": "Astronomy",
+            "title": "Groundbreaking Discovery: New Exoplanet Found with Potential for Life",
+            "image": "https://t.ctcdn.com.br/PCJWbOsdH4JRk8xOGNw6SaH4Mhk=/1200x675/smart/i435229.jpeg"
+        },
+        {
+            "id": 3,
+            "p": "Astronomy",
+            "title": "NASA's Latest Mars Rover Unveils Stunning Images and Scientific Discoveries",
+            "image": "https://img.olhardigital.com.br/wp-content/uploads/2022/12/Marte.jpg"
+        },
+        {
+            "id": 4,
+            "p": "Animals",
+            "title": "Whale Conservation Efforts Gain Momentum Amidst Rising Threats and Challenges",
+            "image": "https://c02.purpledshub.com/uploads/sites/62/2019/10/GettyImages-1164887104_Craig-Lambert-2faf563.jpg?w=1029&webp=1"
+        }
+    ]
+}
