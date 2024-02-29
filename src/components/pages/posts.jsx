@@ -45,10 +45,8 @@ const PostList = () => {
             </Section>
             <MustRead />
             <SubscribeNewsletter />
-            {/* <Footer /> */}
+            <Footer />
         </>
-
-
     )
 }
 
@@ -86,7 +84,7 @@ const Article = styled.article`
         width: 82%; 
         height: 1px; 
         background-color: #000; 
-    }
+        }
     }
     a:nth-child(2) {
         grid-area: first-child;
@@ -106,6 +104,26 @@ const Article = styled.article`
         }
     a:nth-child(5) {
         grid-area: fourth-child;
+    }
+
+    @media (max-width: 1000px) {
+        grid: "title title" auto
+          "first-child second-child" auto
+          "third-child fourth-child" auto /
+        1fr 1fr;
+
+        a, a:nth-child(2) {
+            img {
+                width: 100%;
+                height: 215px;
+            }
+        }
+
+        h2:first-child {
+            &::after {
+                width: 75%;
+            }
+        }
     }
 `
 
@@ -136,6 +154,11 @@ const Div = styled.div`
         color: grey;
          margin: 8px 0;
         font-size: 14px;
+    }
+
+    @media (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
     }
 `
 

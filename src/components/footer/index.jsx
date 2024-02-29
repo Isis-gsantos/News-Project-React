@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+import { FaEnvelope, FaFacebook, FaInstagram, FaPhone, FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa";
 
 
 const Footer = () => {
@@ -11,12 +10,10 @@ const Footer = () => {
                     <h2>ScienceBlog</h2>
                     <nav>
                         <ul>
-                            <li>+55 0000-0000</li>
-                            <li>email@email.com</li>
+                            <li><FaPhone /> +55 0000-0000</li>
+                            <li><FaEnvelope/> email@email.com</li>
                         </ul>
                     </nav>
-                    
-                   
                 </Content>
 
                 <Content>
@@ -35,7 +32,11 @@ const Footer = () => {
                     <h3>Social Media</h3>
                     <nav>
                         <ul>
-                            
+                            <li><a href=""><FaTwitter size={24} /></a></li>
+                            <li><a href=""><FaFacebook size={24} /></a></li>
+                            <li><a href=""><FaInstagram size={24} /></a></li>
+                            <li><a href=""><FaTiktok size={24} /></a></li>
+                            <li><a href=""><FaYoutube size={24} /></a></li>
                         </ul>
                     </nav>
                 </Content>
@@ -63,11 +64,24 @@ const Content = styled.div`
         margin: 5px 0;
         font-weight: 400;
         cursor: pointer;
+        font-size: 16px;
+    }
+
+    .social-media {
+        font-size: 20px;
     }
 
     h2, h3 {
         color: cornflowerblue;
         margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 20px;
     }
 `
 

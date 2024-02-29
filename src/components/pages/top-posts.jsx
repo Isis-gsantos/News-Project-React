@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 async function getPosts() {
@@ -23,13 +24,13 @@ const MustRead = () => {
             <Container>
                 <h2>Top in the community</h2>
                 {posts.map((post, index) =>
-                    <article key={index}>
+                    <Link key={index} to={`/top-posts/post/${post.id}`}>
                         <Post>
                             <img src={post.image} alt={post.p} />
                             <p>{post.p}</p>
                             <h3>{post.title}</h3>
                         </Post>
-                    </article>
+                    </Link>
                 )}
             </Container>
         </>
@@ -41,8 +42,8 @@ const Container = styled.section`
     gap: 15px;
     padding: 50px 30px;
     display: grid;
-        grid: "title title title title" auto
-               "first-child second-child third-child fourth-child" auto;
+    grid: "title title title title" auto
+            "first-child second-child third-child fourth-child" auto;
     h2 {
         grid-area: title;
         position: relative;
@@ -70,6 +71,29 @@ const Container = styled.section`
     }
     div:nth-child(4) {
         grid-area: fourth-child;
+    }
+
+    @media (max-width: 1282px) {
+        grid: "title title" auto
+            "first-child second-child" auto
+            "third-child fourth-child" auto;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 1264px) {
+        h2 {
+            &::after {
+                width: 70%;
+            }
+        }
+    }
+
+    @media (max-width: 1000px) {
+        h2 {
+            &::after {
+                width: 60%;
+            }
+        }
     }
 `
 
@@ -101,6 +125,16 @@ const Post = styled.div`
     h3 {
         font-size: 16px;
         font-weight: 500;
+    }
+
+    @media (max-width: 1282px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            max-width: 350px;
+        }
     }
 `
 

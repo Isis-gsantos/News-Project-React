@@ -3,12 +3,13 @@ import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import styled from "styled-components";
 
+
 async function getPost(id) {
-    const response = await fetch(`http://localhost:5173/json/post-${id}.json`)
+    const response = await fetch(`http://localhost:5173/json/top-posts/post-${id}.json`)
     return await response.json()
 }
 
-const PostDetails = () => {
+const TopPostDetails = () => {
     const [post, setPost] = useState({})
 
     const { id } = useParams()
@@ -75,4 +76,4 @@ const Image = styled.img`
     border-radius: 5px;
 `
 
-export { PostDetails }
+export { TopPostDetails }

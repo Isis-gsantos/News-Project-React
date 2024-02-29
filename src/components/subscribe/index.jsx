@@ -79,6 +79,7 @@ const Form = styled.div`
         padding: 2px 5px;
         background-color: none;
         margin-right: 5px;
+        color: #000;
     }
 
     button {

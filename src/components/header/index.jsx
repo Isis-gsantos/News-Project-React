@@ -7,16 +7,13 @@ const Header = () => {
         <Container>
             <Head>
                 <h1>ScienceBlog</h1>
-
-                <nav>
-                    <Navbar>
-                        <li>About</li>
-                        <li>Science</li>
-                        <li>Technology</li>
-                        <li>Health</li>
-                        <li>Animals</li>
-                    </Navbar>
-                </nav>
+                <Navbar>
+                    <a href="#">About</a>
+                    <a href="#">Science</a>
+                    <a href="#">Technology</a>
+                    <a href="#">Health</a>
+                    <a href="#">Animals</a>
+                </Navbar>
             </Head>
 
             <div>
@@ -30,21 +27,21 @@ const Container = styled.section`
     background-image: url(${Jellyfishimage});
     background-size: cover;
     height: 80vh;
+    position: relative;
 
     div h2 {
         color: #fff;
-        margin: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        position: absolute;
+        top: 40%;
+        left: 15%;
         text-align: center;
         max-width: 70%;
-        margin: 0 auto;
         font-size: 25px;
-        height: 300px;
-        position : relative;
-        z-index: 2;
         text-shadow: 2px 2px 4px hsla(0, 0%, 0%, 0.7); 
+    }
+
+    @media (max-width: 1200px) {
+        height: 70vh;
     }
 `
 
@@ -58,17 +55,15 @@ const Head = styled.header`
     h1 {
         color: #fff;
         font-size: 30px;
-        /* cursor: pointer; */
     }
 `
 
-const Navbar = styled.ul`
+const Navbar = styled.nav`
     display: flex;
     gap: 40px;
     list-style: none;
 
-    li {
-        cursor: pointer;
+    a {
         padding: 3px 5px;
         font-weight: 400;
         color: honeydew;
@@ -77,7 +72,6 @@ const Navbar = styled.ul`
         &:hover {
             border: 1px solid white;
             border-radius:20px;
-            
         }
     }
 `
