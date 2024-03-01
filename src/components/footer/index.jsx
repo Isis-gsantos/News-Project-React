@@ -50,6 +50,11 @@ const Container = styled.section`
     justify-content: space-around;
     padding: 50px;
     background-color: black;
+
+    @media (max-width: 660px) {
+        display: flex;
+        flex-direction: column;
+    }
 `
 
 const Content = styled.div`
@@ -82,6 +87,10 @@ const Content = styled.div`
 
     h3 {
         font-size: 20px;
+    }
+
+    @media (max-width: 660px) {
+        margin: 20px 0;
     }
 `
 

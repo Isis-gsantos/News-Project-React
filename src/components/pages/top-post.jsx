@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import styled from "styled-components";
 
-
 async function getPost(id) {
     const response = await fetch(`http://localhost:5173/json/top-posts/post-${id}.json`)
     return await response.json()
@@ -67,6 +66,28 @@ const Container = styled.section`
 
     p {
         color: #000;
+    }
+
+    @media (max-width: 1030px) {
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            max-width: 85%;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    @media (max-width: 540px) {
+        h2 {
+            font-size: 20px;
+        }
     }
 `
 

@@ -95,6 +95,26 @@ const Container = styled.section`
             }
         }
     }
+
+    @media (max-width: 800px) {
+        h2 {
+            &::after {
+                width: 50%;
+            }
+        }
+    }
+
+    @media (max-width: 660px){
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        h2 {
+            &::after {
+                width: 0;
+            }
+        }
+    }
 `
 
 const Post = styled.div`
@@ -135,6 +155,14 @@ const Post = styled.div`
         h3 {
             max-width: 350px;
         }
+    }
+
+    @media (max-width: 660px) {
+        background-color: #eee;
+        border-radius: 10px;
+        display: flex;
+        padding: 20px 0;
+        box-shadow: 3px 3px 6px hsla(0, 0%, 0%, 0.2);
     }
 `
 

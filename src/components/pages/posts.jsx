@@ -125,6 +125,27 @@ const Article = styled.article`
             }
         }
     }
+
+    @media (max-width: 800px) {
+        h2:first-child {
+            &::after {
+                width: 65%;
+            }
+        }
+    }
+
+    @media (max-width: 660px){
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media (max-width: 560px) {
+        h2:first-child {
+            &::after {
+                width: 0;
+            }
+        }
+    }
 `
 
 const Div = styled.div`  

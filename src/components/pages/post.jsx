@@ -67,6 +67,28 @@ const Container = styled.section`
     p {
         color: #000;
     }
+
+    @media (max-width: 1030px) {
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            max-width: 85%;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    @media (max-width: 540px) {
+        h2 {
+            font-size: 20px;
+        }
+    }
 `
 
 const Image = styled.img`

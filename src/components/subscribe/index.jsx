@@ -30,7 +30,7 @@ const SubscribeNewsletter = () => {
     return (
         <Container>
             <Content>
-                <h2>Want more content <br></br> like this?</h2>
+                <h2>Want more content like this?</h2>
                 <Form onSubmit={handleSubmit}>
                     <span>Subscribe to our newsletter</span>
                     <form action="">
@@ -54,19 +54,31 @@ const Content = styled.section`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* gap: 120px; */
     padding: 50px;
     background-color: #fff;
     max-width: 800px;
     margin: 0 auto;
     box-shadow: 3px 3px 6px hsla(0, 0%, 0%, 0.2);
     border-radius: 10px;
+    gap: 20px;
 
     h2 {
         color: cornflowerblue;
         text-transform: uppercase;
         font-size: 25px;
         font-weight: 700;
+        flex-wrap: wrap;
+        max-width: 350px;
+    }
+
+    @media (max-width: 660px) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        input {
+            margin-bottom: 10px;
+        }
     }
 `
 
